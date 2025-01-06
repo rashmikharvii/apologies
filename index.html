@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Message for My Friends</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #ff7f50;
+    }
+    .form-container {
+      margin-top: 50px;
+    }
+    input, button, select {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px;
+    }
+    .message-container {
+      display: none;
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .message-container img {
+      max-width: 100px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Your Secret Message! 💌</h1>
+  <div class="form-container">
+    <label for="friend-name">Select your name:</label>
+    <select id="friend-name">
+      <option value="none">--Choose Your Name--</option>
+      <option value="Priyanka">Priyanka</option>
+      <option value="Vanita">Vanita</option>
+    </select>
+    <br>
+    <label for="secret-code">Enter your secret code:</label>
+    <input type="password" id="secret-code" placeholder="Enter Secret Code">
+    <br>
+    <button onclick="showMessage()">See Your Message</button>
+  </div>
+
+  <div id="message-container-1" class="message-container">
+    <h2>Hey Priyankkk !! 🎉</h2>
+    <pre><p style="font-family: 'Arial', sans-serif;">A little late, but still from the bottom of my heart—Happy New Year! 
+        May this year bring you all the happiness and success you deserve. 
+        Even though I’m sending my wishes a bit late, still they come with all my love and best intentions 
+        for your wonderful year ahead. And sorry for the delay🤗. Happy New Year!!❤️</p></pre>
+    <img src="priyanka.jpg" alt="Memory" style="max-width: 800px; width:100%;">
+    <h3><figcaption>Try to recall these moment!!</figcaption></h3>
+  </div>
+
+  <div id="message-container-2" class="message-container">
+    <h2>Hey Vaniii !! 🌟</h2>
+    <pre><p style="font-family: 'Arial', sans-serif;">Better late than never! I may be sending this after the celebrations, 
+      but my wish for you is still filled with all the good vibes and blessings 
+      for the year ahead. May every day of 2025 bring you closer to your dreams and fill 
+      your heart with happiness!!💖And sorry for the delay🥹😽. Happy New Year!!❤️ </p></pre>
+    <img src="vani.jpg" alt="Memory" style="max-width: 800px; width:100%;">
+    <h3><figcaption>This picture says it all-so many happy moments.!!</figcaption></h3>
+  </div>
+
+  <script>
+    function showMessage() {
+      // Get the selected name and the entered code
+      const friendName = document.getElementById("friend-name").value;
+      const secretCode = document.getElementById("secret-code").value;
+
+      // Hide all messages initially
+      document.getElementById("message-container-1").style.display = "none";
+      document.getElementById("message-container-2").style.display = "none";
+
+      // Logic to check the name and code
+      if (friendName === "Priyanka" && secretCode === "huchi1") {
+        document.getElementById("message-container-1").style.display = "block";
+      } else if (friendName === "Vanita" && secretCode === "huchi2") {
+        document.getElementById("message-container-2").style.display = "block";
+      } else {
+        alert("Invalid name or secret code. Please try again.");
+      }
+    }
+  </script>
+</body>
+</html>
